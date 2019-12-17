@@ -68,19 +68,7 @@ app.get('/weather', (req, res) => {
       })
     })
   }
-
-  /* res.send({
-    location: req.query.address,
-    forecast: 'A 70% chance of showers with a maximum temperature of 19 degrees Celcius.',
-    console: console.log(req.query.address)
-  }) */
-  /* res.send({
-    location: 'East London',
-    forecast: 'A 70% chance of showers with a maximum temperature of 19 degrees Celcius.'
-  }) */
 })
-
-
 
 app.get('/products', (req, res) => {
   if (!req.query.search) {
@@ -112,10 +100,6 @@ app.get('*', (req, res) => {
 
   })
 })
-
-// app.com
-// app.com/help
-// app.com/about
 
 app.listen(port, () => {
   console.log('Server is up on port ' + port)
