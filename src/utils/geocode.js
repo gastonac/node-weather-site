@@ -3,11 +3,6 @@ const request = require("request");
 // Geocoding - Taking an address like East London - SA, and converting it to a lat and long cordinate pair
 
 const geocode = (address, callback) => {
-  /* const url =
-    "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
-    address +
-    ".json?access_token=pk.eyJ1IjoiZ2FzdG9uYWMiLCJhIjoiY2szcG1yMmprMDRoazNubm5qaHJoYTdwbiJ9.Phxk-JL2AcigAKvUmhnd-A&limit=1"; */
-
   const url =
     "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
     encodeURIComponent(address) +
