@@ -7,7 +7,7 @@ const forecast = (latitude, longitude, callback) => {
     "," +
     longitude;
 
-  request({ url, json: true }, (error, { body }) => {
+  request({ url, json: true }, (error, { body } = {}) => {
     if (error) {
       callback("Unable to connect to weather service.", undefined);
     } else if (body.error) {
@@ -17,6 +17,16 @@ const forecast = (latitude, longitude, callback) => {
       );
     } else {
       callback(
+        undefined,
+        "Forecast: " +
+          body.current.weather_descriptions +
+          ". It is currently " +
+          body.current.temperature +
+          " degrees outside. There is a " +
+          body.current.precip * 100 +
+          "% chance of rain today."
+      );
+      /* callback(
         undefined,
         "Forecast: " +
           body.current.weather_descriptions +
@@ -31,7 +41,7 @@ const forecast = (latitude, longitude, callback) => {
           body.current.precip * 100 +
           "% chance of rain today. The summary for tomorrow: " +
           body.daily.data[1].summary
-      );
+      ); */
     }
   });
 };
