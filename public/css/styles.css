@@ -3,7 +3,7 @@ body {
   font-family: Arial;
   max-width: 650px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
 
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ h1 {
   margin-bottom: 16px;
 }
 
-a {
+header a {
   color: #888888;
   margin-right: 16px;
   text-decoration: none;
@@ -53,4 +53,3 @@ button {
   color: white;
   padding: 8px;
 }
-
