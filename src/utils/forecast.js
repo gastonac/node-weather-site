@@ -18,30 +18,16 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        "Forecast: " +
+        "As at " +
+          body.current.observation_time +
+          ", The forecast for today: " +
           body.current.weather_descriptions +
-          ". It is currently " +
+          ". Current temparature: " +
           body.current.temperature +
-          " degrees outside. There is a " +
+          " degrees C. There is a " +
           body.current.precip * 100 +
           "% chance of rain today."
       );
-      /* callback(
-        undefined,
-        "Forecast: " +
-          body.current.weather_descriptions +
-          " It is currently " +
-          body.current.temperature +
-          " degrees outside. The high today is " +
-          body.daily.data[0].temperatureHigh +
-          " with a low of " +
-          body.daily.data[0].temperatureLow +
-          "." +
-          " There is a " +
-          body.current.precip * 100 +
-          "% chance of rain today. The summary for tomorrow: " +
-          body.daily.data[1].summary
-      ); */
     }
   });
 };
