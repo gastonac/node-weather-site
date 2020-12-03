@@ -20,7 +20,7 @@ const forecast = (latitude, longitude, callback) => {
         undefined,
         "As at " +
           body.current.observation_time +
-          ", The forecast for today: " +
+          ", Todays forecast: " +
           body.current.weather_descriptions +
           ". Current temparature: " +
           body.current.temperature +
